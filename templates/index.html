@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Gaming Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Python Gaming</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Welcome to our Python gaming website. We offer a variety of Python-based games for your entertainment.</p>
+    </div>
+</section>
+
+<section id="games">
+    <div class="container">
+        <h2>Our Games</h2>
+        <div class="games-grid">
+            <!-- Game 1 -->
+            <!-- <div class="game">
+                <img src="{{ url_for('static', filename='game1.jpg') }}" alt="Game 1">
+                <div class="game-info">
+                    <h3>2048</h3>
+                    <p>2048 is a single-player sliding block puzzle game designed by Italian web developer Gabriele Cirulli. The game's objective is to slide numbered tiles on a grid to combine them to create a tile with the number 2048</p>
+                    <form method="post" action="{{ url_for('run_game') }}">
+                        <input type="hidden" name="game" value="game1.py">
+                        <button type="submit">Play Now</button>
+                    </form>
+                </div>
+            </div> -->
+            <!-- Example for Game 1 -->
+<div class="game">
+    <img src="{{ url_for('static', filename='game1.jpg') }}" alt="Game 1">
+    <div class="game-info">
+        <h3>2048</h3>
+        <p>2048 is a single-player sliding block puzzle game designed by Italian web developer Gabriele Cirulli. The game's objective is to slide numbered tiles on a grid to combine them to create a tile with the number 2048</p>
+        <form method="post" action="{{ url_for('run_game') }}" target="_blank">
+            <input type="hidden" name="game" value="game1.py">
+            <button type="submit">Play Now</button>
+        </form>
+    </div>
+</div>
+
+
+            <!-- Game 2 -->
+            <div class="game">
+                <img src="{{ url_for('static', filename='game2.jpg') }}" alt="Game 2">
+                <div class="game-info">
+                    <h3>Balloon Shooter</h3>
+                    <p>The Balloon Shooter Game is a fast-paced, addictive arcade game where players aim and shoot darts or projectiles to pop balloons that appear on the screen. With vibrant graphics, engaging sound effects, and a variety of challenging levels, the game provides endless entertainment for players of all ages.</p>
+                    <form method="post" action="{{ url_for('run_game') }}" target="_blank">
+                        <input type="hidden" name="game" value="game2.py">
+                        <button type="submit">Play Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="game">
+                <img src="{{ url_for('static', filename='game3.jpg') }}" alt="Game 3">
+                <div class="game-info">
+                    <h3>Snake Game</h3>
+                    <p>The Snake Game is a classic arcade-style video game that has been a favorite among players for decades. The primary objective is to control a snake, guiding it around the screen to eat food while avoiding collisions with the walls, obstacles, and itself. The game is known for its simple yet addictive gameplay, challenging players to achieve the highest score possible by growing the longest snake.</p>
+                    <form method="post" action="{{ url_for('run_game') }}" target="_blank">
+                        <input type="hidden" name="game" value="game3.py">
+                        <button type="submit">Play Now</button>
+                    </form>
+                </div>
+            </div>
+            <div class="game">
+                <img src="{{ url_for('static', filename='game4.jpg') }}" alt="Game 4">
+                <div class="game-info">
+                    <h3>Word Search Game</h3>
+                    <p>The Word Search Game is a classic puzzle game where players are given a grid filled with letters. Hidden within this grid are words that players must find. Words can be placed horizontally, vertically, diagonally, and can read forwards or backwards</p>
+                    <form method="post" action="{{ url_for('run_game') }}" target="_blank">
+                        <input type="hidden" name="game" value="game4.py">
+                        <button type="submit">Play Now</button>
+                    </form>
+                </div>
+            </div>
+            <div class="game">
+                <img src="{{ url_for('static', filename='game5.jpg') }}" alt="Game 5">
+                <div class="game-info">
+                    <h3>Pong Game</h3>
+                    <p>Pong is one of the earliest arcade video games, created by Atari and released in 1972. It is a table tennis sports game featuring simple two-dimensional graphics</p>
+                    <form method="post" action="{{ url_for('run_game') }}" target="_blank">
+                        <input type="hidden" name="game" value="game5.py">
+                        <button type="submit">Play Now</button>
+                    </form>
+                </div>
+            </div>
+            <div class="game">
+                <img src="{{ url_for('static', filename='game6.jpg') }}" alt="Game 6">
+                <div class="game-info">
+                    <h3>Quiz Game</h3>
+                    <p> A quiz game is a type of interactive game where players are presented with questions and have to select the correct answers from a list of choices. </p>
+                    <form method="post" action="{{ url_for('run_game') }}" target="_blank">
+                        <input type="hidden" name="game" value="game6.py">
+                        <button type="submit">Play Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to reach out to us.</p>
+        <p>Email:TEAME@example.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Python Gaming. All rights reserved.</p>
+</footer>
+
+{% if result %}
+<div class="output">
+    <h2>Game Output:</h2>
+    <pre>{{ result }}</pre>
+</div>
+{% endif %}
+
+</body>
+</html>
